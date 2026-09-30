@@ -27,7 +27,6 @@
   --text-2xl: clamp(2.125rem, 1.5rem + 2.8vw, 3.5rem);
 
   /* Spacing */
-  --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 1rem;
   --space-4: 1.5rem;
@@ -345,6 +344,7 @@ ol {
 
 .trust-line li::before {
   content: "✓";
+  content: "✓" / "";
   margin-right: var(--space-2);
   color: var(--color-success);
 }
@@ -468,21 +468,21 @@ ol {
   color: var(--color-muted);
 }
 
-.compare__before::before {
-  content: "Today: ";
+.compare__label {
   font-weight: 700;
+}
+
+.compare__before .compare__label {
   color: var(--color-danger);
+}
+
+.compare__after .compare__label {
+  color: var(--color-success);
 }
 
 .compare__after {
   font-weight: 600;
   color: var(--color-navy);
-}
-
-.compare__after::before {
-  content: "After: ";
-  font-weight: 700;
-  color: var(--color-success);
 }
 
 .compare__row--head {
@@ -521,9 +521,14 @@ ol {
     color: #ffffff;
   }
 
-  .compare__before::before,
-  .compare__after::before {
-    content: none;
+  /* Header row shows the labels visually; keep them for screen readers */
+  .compare__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .compare__after {
@@ -533,6 +538,7 @@ ol {
 
   .compare__row:not(.compare__row--head) .compare__after::before {
     content: "→";
+    content: "→" / "";
     position: absolute;
     left: 0;
     color: var(--color-success);
@@ -605,6 +611,7 @@ ol {
 
 .checklist li::before {
   content: "✓";
+  content: "✓" / "";
   position: absolute;
   left: 0;
   top: 0;
@@ -623,6 +630,7 @@ ol {
 
 .checklist--no li::before {
   content: "✕";
+  content: "✕" / "";
   background: rgba(180, 35, 24, 0.1);
   color: var(--color-danger);
 }
@@ -731,6 +739,7 @@ ol {
 
 .faq summary::after {
   content: "+";
+  content: "+" / "";
   position: absolute;
   right: var(--space-4);
   top: 50%;
@@ -742,6 +751,7 @@ ol {
 
 .faq[open] summary::after {
   content: "−";
+  content: "−" / "";
 }
 
 .faq p {
