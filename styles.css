@@ -214,6 +214,9 @@ ol {
 }
 
 .btn--small {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   padding: 0.55rem 0.9rem;
   font-size: var(--text-sm);
   white-space: nowrap;
@@ -246,7 +249,7 @@ ol {
 .email {
   font-weight: 700;
   color: #ffffff;
-  word-break: break-all;
+  white-space: nowrap;
 }
 
 /* ---------- Header ---------- */
@@ -767,6 +770,75 @@ ol {
   font-size: var(--text-lg);
 }
 
+/* ---------- Copy email + CTA notice ---------- */
+
+.copy-btn {
+  margin-left: var(--space-2);
+  padding: 0.3rem 0.7rem;
+  min-height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.copy-status {
+  margin-left: var(--space-2);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.cta-notice {
+  position: fixed;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: var(--space-3);
+  z-index: 60;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  padding-right: calc(var(--space-4) + 2rem);
+  border-radius: var(--radius);
+  background: var(--color-navy);
+  color: var(--color-on-dark);
+  box-shadow: 0 12px 32px rgba(11, 37, 69, 0.35);
+  font-size: var(--text-sm);
+}
+
+.cta-notice[hidden] {
+  display: none;
+}
+
+.cta-notice__text {
+  margin: 0 0 var(--space-2);
+}
+
+.cta-notice__actions .copy-btn {
+  margin-left: 0;
+}
+
+.cta-notice__close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--color-on-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -779,4 +851,8 @@ ol {
 
 .site-footer p {
   margin: 0 auto;
+}
+
+.site-footer a {
+  color: var(--color-on-dark);
 }
