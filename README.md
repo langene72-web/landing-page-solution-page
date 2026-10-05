@@ -10,7 +10,8 @@ It's plain HTML and CSS, with no build step and no dependencies.
 - `styles.css`: design tokens and styles
 - `script.js`: CTA fallback notice and copy-email button (the page works without it)
 - `assets/lanre-ogunse.webp`: headshot
-- `assets/flowstate-mark.webp`, `assets/favicon.png`: FlowState Solution LLC "F" mark (header badge, footer, browser tab)
+- `assets/flowstate-mark.webp`, `assets/favicon.png`: FlowState Solution LLC "F" mark (header badge, browser tab)
+- `assets/flowstate-logo.webp`: full FlowState Solution LLC logo (footer)
 - `assets/share-card.jpg`: 1200×630 preview image for LinkedIn and other link shares
 
 ## Preview locally
