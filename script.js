@@ -1,7 +1,7 @@
 // CTA helpers: "didn't open?" notice after a CTA click, and copy-email buttons.
 // The page works without this file; the mailto links and visible address are the baseline.
 (function () {
-  var EMAIL = 'oogunse21612@gmail.com';
+  var EMAIL = 'oogunse2612@gmail.com';
   var notice = document.getElementById('cta-notice');
 
   // Copy buttons are hidden without JavaScript, since they can't work without it.

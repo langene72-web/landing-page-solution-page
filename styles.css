@@ -271,10 +271,27 @@ ol {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
   margin: 0;
   font-weight: 800;
   color: var(--color-navy);
   line-height: 1.2;
+}
+
+.brand__mark {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+@media (min-width: 640px) {
+  .brand__mark {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .brand__role {
@@ -287,6 +304,19 @@ ol {
 @media (max-width: 399px) {
   .brand__role {
     display: none;
+  }
+
+  .brand {
+    font-size: 0.9375rem;
+  }
+
+  .site-header .btn--small {
+    max-width: 9.5rem;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8125rem;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
   }
 }
 
@@ -860,7 +890,14 @@ ol {
 }
 
 .site-footer p {
-  margin: 0 auto;
+  margin: 0 auto var(--space-2);
+}
+
+.site-footer__logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-lg);
 }
 
 .site-footer a {
